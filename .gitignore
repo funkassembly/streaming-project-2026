@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+
+# local data / logs
+data/
+logs/
+*.log
+
+# Spark checkpoints
+checkpoints/
+spark-warehouse/
+
+# env files
+.env
