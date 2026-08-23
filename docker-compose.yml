@@ -69,6 +69,8 @@ services:
       - "19092:19092"
       - "9092:9092"
       - "9644:9644"
+    volumes:
+      - redpanda-data:/var/lib/redpanda/data
     networks:
       - dsnet
 
@@ -83,3 +85,6 @@ services:
 networks:
   dsnet:
     driver: bridge
+ 
+volumes:
+    redpanda-data:
