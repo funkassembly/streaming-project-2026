@@ -1,0 +1,7 @@
+uxsim
+numpy
+kafka-python
+fastapi[standard]
+pymongo
+pandas
+pyspark

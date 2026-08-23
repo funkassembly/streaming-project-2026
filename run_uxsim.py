@@ -97,6 +97,8 @@ def simulate_traffic():
             demands.append({"start": n1.name, "dest": n2.name, "times": {"start": t, "end": t + dt}, "demand": dem})
     return W
 
+# not used
+
 def run_simulation(W):
     W.exec_simulation() # this is blocking — it runs the entire simulation until the end.
 

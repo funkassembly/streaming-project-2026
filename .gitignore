@@ -15,3 +15,7 @@ spark-warehouse/
 
 # env files
 .env
+
+# windows metadata
+*:Zone.Identifier
+*:mshield
