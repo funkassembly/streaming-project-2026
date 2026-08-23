@@ -45,7 +45,7 @@ df = (
     spark.readStream
     .format("kafka")
     .option("kafka.bootstrap.servers", "redpanda:9092")
-    .option("subscribe", "uxsim")
+    .option("subscribe", "vehicle_positions")
     .option("startingOffsets", "latest")
     .load()
 )

@@ -54,7 +54,7 @@ streaming_project/
 
 Creates the UXsim traffic simulation and acts as the Kafka producer.
 
-Only moving vehicles are sent to the `uxsim` Redpanda topic as JSON records.
+Only moving vehicles are sent to the `vehicle_positions` Redpanda topic as JSON records.
 
 The delay between simulation timesteps can be configured using the `--interval` argument.
 
@@ -66,7 +66,7 @@ python3 run_uxsim.py --interval 1
 
 ### `spark_consumer_PC.py`
 
-Uses Spark Structured Streaming to subscribe to the `uxsim` Redpanda topic.
+Uses Spark Structured Streaming to subscribe to the `vehicle_positions` Redpanda topic.
 
 The JSON messages are parsed using a predefined Spark schema.
 
@@ -173,7 +173,7 @@ uxsim
 Messages can be inspected using:
 
 ```bash
-docker exec -it redpanda rpk topic consume uxsim --num 5
+docker exec -it redpanda rpk topic consume vehicle_positions --num 5
 ```
 
 Each message contains vehicle information such as:

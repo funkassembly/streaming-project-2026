@@ -114,7 +114,7 @@ def run_simulation(W):
 
 def kafka_producer_loop(
 	W,
- 	topic="uxsim",
+ 	topic="vehicle_positions",
 	bootstrap_servers="localhost:19092",
 	step_sleep=1.0
 ):
@@ -213,7 +213,7 @@ if __name__ == "__main__":
 	# rum the sim and send to redpanda
 	kafka_producer_loop(
 		W,
-		topic="uxsim",
+		topic="vehicle_positions",
 		bootstrap_servers="localhost:19092",
 		step_sleep=args.interval
 	)
